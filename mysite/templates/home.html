@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type = text/css>
+	html, body {
+	  margin:0;
+	  padding:0;
+	  height:100%;
+	}
+    .container{
+            width:100%;
+			position:center;
+			height:100%;
+			background-color:#082c4e;
+    }
+    h1{
+            color:#ffffff;
+            font-family: arial, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+
+     }
+    h2{
+            color: 'white';
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 400px;
+    }
+
+    input[type=submit]{
+            background-color:transparent;
+            border: 2px solid #ffffff;
+            color: white;
+			border-radius:50px;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 15px;
+			outline: none;
+			transition:transform 0.5s;
+    }
+	input[type=submit]:hover{
+		transform:translateY(-10px);
+	}
+	.navbar{
+		height:12%;
+		display:flex;
+		align-items:center;
+	}
+	.logo{
+		width:80px;
+		cursor:pointer;
+		transition:transform 0.5s;
+	}
+	.logo:hover{
+		transform:translateY(10px);
+	}
+	.menu_icon {
+		width: 30px;
+		cursor: pointer;
+		margin-left: 120px;
+	}
+
+	nav{
+		flex:1;
+		text-align:right;
+	}
+	nav ul li{
+		list-style:none;
+		display:inline-block;
+		margin-left:60px;
+	}
+	nav ul li a{
+		text-decoration:none;
+		color:#ffffff;
+		font-size:15px;
+	}
+	.row{
+		display:flex;
+		height:88%;
+		align-items:center;
+	}
+	.col{
+		flex-basis:50%;
+	}
+	.card{
+		width:200px;
+		height:230px;
+		display:inline-block;
+		border-radius:10px;
+		padding:15px 25px;
+		box-sizing:border-box;
+		cursor:pointer;
+		margin: 10px 15px;
+		transition:transform 0.5s;
+	}
+	.card:hover{
+		transform:translateY(-10px);
+	}
+
+    </style>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+	<div class="navbar">
+			<img src="{%static 'mysite/images/diabeteslogo.png'%}" class="logo">
+			<nav>
+				<ul>
+					<li><a href="">HOME</a></li>
+					<li><a href="https://towardsdatascience.com/https-medium-com-pupalerushikesh-svm-f4b42800e989">REFERENCE</a></li>
+					<li><a href="https://colab.research.google.com/drive/15mgCMXLGian0Ay8VvCKMrCSX5Feo9LCi">GOOGLE COLLAB</a></li>
+				</ul>
+			</nav>
+			<img src="{%static 'mysite/images/menu.png'%}" class="menu_icon">
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h1><b>WELCOME TO DIABETES PREDICTION SYSTEM</b></h1>
+				<form action = "predict">
+					<input type = "submit" value = "Lets Get Started ">
+				</form>
+			</div>
+
+		<div class="col">
+    <div class="card" style="background-color:#fe6571;">
+        <h5><b>Diabetes Data</b></h5>
+        <img src="{%static 'mysite/images/data.png'%}" height=40px>
+        <h5 style="font-size: 12px; ">Analyzed data, found diabetes relations with categories. Replaced wrongly marked 0's with mean/median.</h5>
+    </div>
+    <div class="card" style="background-color:#ffcc00;">
+       <h5><b>Data Pre-Processing</b></h5>
+        <img src="{%static 'mysite/images/process.png'%}" height=30px>
+        <h5 style="font-size: 12px; ">Standardize the data. Data must be in same range. Improves accuracy of the model.</h5>
+    </div>
+    <div class="card" style="background-color:#22a5e5;">
+        <h5><b>Train Test Split</b></h5>
+        <img src="{%static 'mysite/images/test.png'%}" height=40px>
+        <h5 style="font-size: 12px; ">Train ML model with training data. Test ML model with testing data(accuracy score).</h5>
+    </div>
+    <div class="card" style="background-color:#f2eae2;">
+        <h5><b>New Data</b></h5>
+        <img src="{%static 'mysite/images/new.png'%}" height=40px>
+        <h5 style="font-size: 12px; ">Giving new values to the Support Vector Machine Model to predict if the patient is diabetic or not.</h5>
+    </div>
+</div>
+
+		</div>
+
+    </div>
+	<div class="container" style="text-align: center; background-color:#ffffff; height:30%; padding-bottom:10px;">
+    <div class="row">
+        <div class="col" style="position: relative;">
+            <img src="{%static 'mysite/images/kaggle.png'%}" height="150px" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%);">
+            <h2 style="margin-top: 150px;">Dataset from kaggle</h2>
+        </div>
+        <div class="col" style="position: relative;">
+            <img src="{%static 'mysite/images/svm.png'%}" height="120px" style="position: absolute; top: 12%; left: 50%; transform: translateX(-50%);">
+            <h2 style="margin-top: 150px;">Using SVM Model</h2>
+        </div>
+        <div class="col" style="position: relative;">
+            <img src="{%static 'mysite/images/py.png'%}" height="120px" style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%);">
+            <h2 style="margin-top: 150px;">Python Group 8</h2>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <style type = text/css>
+	html, body {
+	  margin:0;
+	  padding:0;
+	  height:100%;
+	}
+    .container{
+            width:100%;
+			position:center;
+			height:100%;
+			background-color:#082c4e;
+    }
+    h1{
+            color:#ffffff;
+            font-family: arial, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+
+     }
+
+    input[type=submit]{
+            background-color:#082c4e;
+            border: 2px solid #000000;
+            color: white;
+			border-radius:50px;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 15px;
+			outline: none;
+    }
+
+	.logo{
+		width:190px;
+		cursor:pointer;
+		transition:transform 0.5s;
+	}
+	.logo:hover{
+		transform:translateY(-10px);
+	}
+
+	.row{
+		display:flex;
+		height:88%;
+		align-items:center;
+	}
+	.col{
+		flex-basis:50%;
+
+	}
+	.card{
+		width:500px;
+		align-items:center;
+		height:530px;
+		display:inline-block;
+		border-radius:10px;
+		padding:15px 25px;
+		box-sizing:border-box;
+		box-sizing:border-box;
+		margin: 10px 15px;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 3);
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	table {
+	  border-collapse: separate;
+	  border-spacing: 5spx;
+	}
+	td {
+	  padding: 5px;
+	}
+    </style>
+</head>
+<body>
+    <div align= 'center' class="container">
+	<div class="row">
+			<div class="col">
+                <h1><b>PLEASE ENTER THE INFORMATION</b></h1>
+				<img src="{%static 'mysite/images/diabeteslogo.png'%}" class="logo">
+			</div>
+		<div class="col">
+		<div class="card" style="background-color:#fe6571;">
+<h2><b>DETAILS</b></h2>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right">Pregnancies:</td>
+                    <td align="left"> <input type="text" name="n1"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Glucose:</td>
+                    <td align="left"> <input type="text" name="n2"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Blood Pressure:</td>
+                    <td align="left"> <input type="text" name="n3"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Thickness:</td>
+                    <td align="left"> <input type="text" name="n4"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Insulin</td>
+                    <td align="left"> <input type="text" name="n5"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">BMI:</td>
+                    <td align="left"> <input type="text" name="n6"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Diabetes Pedigree Function:</td>
+                    <td align="left"> <input type="text" name="n7"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Age:</td>
+                    <td align="left"> <input type="text" name="n8"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        Result:{{result2}}
+		</div>
+		</div>
+    </div>
+	</div>
+</body>
+</html>
